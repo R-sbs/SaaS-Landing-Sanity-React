@@ -13,6 +13,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+import { ModeToggle } from './ModeToggler'
 
 function MobileNavLink({
   href,
@@ -87,15 +88,16 @@ export function Header() {
     <header className="py-10">
       <Container>
         <nav className="relative z-50 flex justify-between">
-          <div className="flex items-center md:gap-x-12">
+          <div className="flex items-end md:gap-x-12">
             <Link href="#" aria-label="Home">
               <Logo className="h-10 w-auto" />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
-              <NavLink href="/blog">Blog</NavLink>
+              <NavLink href="/">Home</NavLink>
+              <NavLink href="/#features">Features</NavLink>
+              <NavLink href="/#testimonials">Testimonials</NavLink>
+              <NavLink href="/#pricing">Pricing</NavLink>
+              <NavLink href="/blogs">Blogs</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
@@ -107,6 +109,7 @@ export function Header() {
                 Get started <span className="hidden lg:inline">today</span>
               </span>
             </Button>
+            <ModeToggle />
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>

@@ -6,16 +6,18 @@ import { NavLink } from '@/components/NavLink'
 
 export function Footer() {
   return (
-    <footer className="bg-slate-50">
+    <footer className="light:bg-slate-50 dark:bg-gray-900">
       <Container>
-        <div className="py-16">
-          <Logo className="mx-auto h-10 w-auto" />
-          <nav className="mt-10 text-sm" aria-label="quick links">
-            <div className="-my-1 flex justify-center gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
-            </div>
+        <div className="py-12">
+          <nav
+            className="inline-flex w-full items-end justify-center gap-8 text-sm"
+            aria-label="quick links"
+          >
+            <Logo className="h-10 w-auto" />
+            <NavLink href="#features">Features</NavLink>
+            <NavLink href="#testimonials">Testimonials</NavLink>
+            <NavLink href="#pricing">Pricing</NavLink>
+            <NavLink href="/blogs">Blogs</NavLink>
           </nav>
         </div>
         <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
